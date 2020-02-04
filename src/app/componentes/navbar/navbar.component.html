@@ -21,11 +21,14 @@
       <li class="nav-item mx-right" *ngIf="isLogin">
         <a class="nav-link" href="#" (click)="onClickLogout()" >Salir</a>
       </li>
+
+
+
       <li class="nav-item">
         <a class="nav-link">{{nombreUsuario}}</a>
       </li>
       <li class="nav-item" *ngIf="isLogin">
-        <img src="{{fotoUsuario}}" class="rounded-circle">
+        <img src="{{fotoUsuario}}" class="rounded-circle img-thumbnail">
         <span class="badge pill badge-secondary">{{emailUsuario}}</span>
       </li>
     </ul>

@@ -43,7 +43,12 @@ export class LoginPageComponent implements OnInit {
 
   loginFbUser(){}
 
-  loginGoogleUser(){}
+  onClickGoogleLogin() {
+   this.authService.loginGoogle()
+    .then((resp) => {
+        this.router.navigate(['/privado']);
+    }).catch( err => console.log(err.message));
+  }
 
   logoutUser(){}
 
